@@ -1,0 +1,125 @@
+
+  .container {
+    max-width: 1300px;
+    margin: 6rem auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid-item {
+    position: relative;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 345px; 
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Positioning text */
+  .grid-item span {
+    position: absolute;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Specific positioning for each text */
+  .grid-item:nth-child(1) span,
+  .grid-item:nth-child(3) span {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .grid-item:nth-child(2) span,
+  .grid-item:nth-child(4) span {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* Animation for grid items */
+  .grid-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  .grid-item:nth-child(1) {
+    animation-delay: 0.12s;
+  }
+
+  .grid-item:nth-child(2) {
+    animation-delay: 0.22s;
+  }
+
+  .grid-item:nth-child(3) {
+    animation-delay: 0.32s;
+  }
+
+  .grid-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+  /* Trapezoid styles */
+  #Trap1 {
+      clip-path: polygon(0% 0%, 100% 0%, 89.7% 100%, 0% 100%);
+      margin-right: -4rem;
+  }
+  #Trap2 {
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      margin-left: -0.75rem;
+  }
+  #Trap3 {
+      clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+      margin-right: -4rem;
+      margin-top: -0.33rem;
+  }
+  #Trap4 {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);
+      margin-left: -0.75rem;
+      margin-top: -0.33rem;
+  }

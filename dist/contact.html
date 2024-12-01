@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AMA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Custom styles for the map and markers */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: url('image2/map1.jpg') center center no-repeat;
+            background-size: cover;
+            border-radius: 8px;
+        }
+
+        .location {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: rgba(255, 250, 250, 0);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .location:hover::after {
+            content: attr(data-location);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header>
+        <nav class="bg-gray-900 p-4 flex justify-between items-center px-12">
+        
+          <div class="text-white text-2xl font-bold">AMA</div>
+      
+         
+          <ul class="hidden md:flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+            <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+            <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+          </ul>
+      
+          
+          <div id="hamburger" class="flex flex-col space-y-1 md:hidden cursor-pointer">
+            <span class="block w-8 h-1 bg-white"></span>
+            <span class="block w-8 h-1 bg-white"></span>
+            <span class="block w-8 h-1 bg-white"></span>
+          </div>
+        </nav>
+      
+        
+        <ul id="mobile-menu" class="hidden md:hidden flex-col bg-gray-800 text-white p-4 space-y-4">
+          <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+          <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+          <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+        </ul>
+      </header>
+
+
+    <!-- Contact Section -->
+    <section class="container mx-auto p-8">
+        <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+        <p class="text-lg mb-8">Get in touch with our team for inquiries, collaborations, or to discuss your next project.</p>
+
+        <!-- Interactive Map -->
+        <div class="map-container">
+            <!-- Location Icon for London -->
+            <div class="location" style="top: 23%; left: 22%;" data-location="New York, USA">
+                <i data-feather="map-pin" class="text-white opacity-75 w-5 h-5"></i>
+            </div>
+        
+            <!-- Location Icon for New York -->
+            <div class="location" style="top: 47%; left: 59%;" data-location="Addis Ababa, Ethiopia">
+                <i data-feather="map-pin" class="text-white opacity-75 w-5 h-5"></i>
+            </div>
+        
+            <!-- Location Icon for Tokyo -->
+            <div class="location" style="top: 36%; left: 63%;" data-location="Dubai, UAE">
+                <i data-feather="map-pin" class="text-white opacity-75 w-5 h-5 "></i>
+            </div>
+
+              <!-- Location Icon for Tokyo -->
+              <div class="location" style="top: 13%; left: 45%;" data-location="London, United Kingdom">
+                <i data-feather="map-pin" class="text-white opacity-75 w-5 h-5"></i>
+            </div>
+        </div>
+        
+
+        <!-- Contact Form and Details -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Details -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                <p class="mb-4">Fill out the form below and we’ll get back to you as soon as possible.</p>
+                <ul>
+                    <li class="mb-2 flex items-center">
+                        <i data-feather="phone" class="mr-2"></i> +1 (555) 123-4567
+                    </li>
+                    <li class="mb-2 flex items-center">
+                        <i data-feather="mail" class="mr-2"></i> info@example.com
+                    </li>
+                    <li class="mb-2 flex items-center">
+                        <i data-feather="map-pin" class="mr-2"></i> 123 Grand Lane, New York, NY 10001
+                    </li>
+                </ul>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#"><i data-feather="facebook"></i></a>
+                    <a href="#"><i data-feather="twitter"></i></a>
+                    <a href="#"><i data-feather="instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded">
+                <input type="text" placeholder="Subject" class="w-full p-3 border border-gray-300 rounded">
+                <textarea placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded"></textarea>
+                <button type="submit" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-[50px]">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between mb-6">
+            <div>
+                <h3 class="text-lg font-bold">Adlucem Architects</h3>
+                <p class="text-gray-400 mt-2">10 Bowling Green Lane</p>
+                <p class="text-gray-400">London EC1R 0BQ/p>
+                <p class="text-gray-400">United Kingdom</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Quick Links</h3>
+                <ul class="text-gray-400 mt-2">
+                    <li><a href="#" class="hover:text-white">Home</a></li>
+                    <li><a href="#" class="hover:text-white">About</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Contact</h3>
+                <p class="text-gray-400 mt-2">Phone: +123 456 789</p>
+                <p class="text-gray-400">Email: info@adlucem.com</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Follow Us</h3>
+                <ul class="flex mt-2 space-x-4 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Facebook</a></li>
+                    <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p class="text-gray-400 mt-2 text-center py-2">© 2024 Adlucem Architects. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+});
+
+        feather.replace(); // Initialize Feather icons
+    </script>
+</body>
+</html>

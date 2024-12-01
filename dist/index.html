@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adlucem Architects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <header>
+        <nav class="bg-gray-900 p-4 flex justify-between items-center px-12">
+          <!-- Logo -->
+          <div class="text-white text-2xl font-bold">AMA</div>
+      
+          <!-- Desktop Navigation -->
+          <ul class="hidden md:flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+            <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+            <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+          </ul>
+      
+          <!-- Hamburger Icon -->
+          <div id="hamburger" class="flex flex-col space-y-1 md:hidden cursor-pointer">
+            <span class="block w-8 h-1 bg-white"></span>
+            <span class="block w-8 h-1 bg-white"></span>
+            <span class="block w-8 h-1 bg-white"></span>
+          </div>
+        </nav>
+      
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden md:hidden flex-col bg-gray-800 text-white p-4 space-y-4">
+          <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+          <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+          <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+        </ul>
+      </header>
+      
+    
+    
+
+    <section class="hero">
+        <div class="overlay">
+            <h1 class="font-extrabold text-8xl text-white">Adlucem Architects</h1>
+            <p class="text-white ">Redefining the boundaries of architecture and design</p>
+            <a href="#" class="cta-button">Explore Our Vision</a>
+        </div>
+    </section>
+
+    <section class="featured-projects px-12 py-8">
+        <h2 class="text-2xl font-semibold mb-4">Featured Projects</h2>
+        <div class="project-display bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="Image/ft1.jpeg" alt="Featured Project" class="w-full h-56 object-cover">
+            <div class="project-info p-4">
+                <h3 class="text-xl font-semibold">Dior Shopping Store</h3>
+                <p class="text-white">Paris, France</p>
+            </div>
+            <div class="container px-4">
+                <div class="project-buttons flex space-x-4 overflow-x-auto scrollbar-hide py-2">
+                    <button class="active px-4 py-2 bg-black text-white rounded-full whitespace-nowrap">Dior Shopping Store</button>
+                    <button class="px-4 py-2 bg-gray-200 text-black rounded-full whitespace-nowrap">Maria Guest House</button>
+                    <button class="px-4 py-2 bg-gray-200 text-black rounded-full whitespace-nowrap">YD Shopping Mall</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 mb-12 px-12">
+        <div class="container mx-auto px-5">
+            <h2 class="text-2xl font-bold mb-6">Latest News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- News Card -->
+                <div class="bg-white border border-gray-300 rounded-lg shadow-sm h-[450px]">
+                    <img src="image2/news.jpeg" alt="News Image"
+                        class="w-full h-41 object-cover rounded-t-lg">
+                    <div class="p-4 mt-2">
+                        <h3 class="font-semibold text-lg mb-2">Unveiling Our Latest Sustainable Skyscraper Design</h3>
+                        <p class="text-sm text-gray-600">A New Paradigm in Urban Architecture.</p>
+                        <a href="#" class="text-gray-400 border border-gray-400 px-3 py-1 rounded mt-4 inline-block hover:bg-gray-400 hover:text-white transition">Read More</a>
+                    </div>
+                </div>
+    
+                <!-- News Card -->
+                <div class="bg-white border border-gray-300 rounded-lg shadow-sm h-[450px]">
+                    <img src="image2/a-photo-of-the-world-architecturecommunity-wa-awar-Sxp0UqJ5Tp6_ioBwm-Jwkg-c0S4vLoPSfiuU_Bzrj-Yhw.jpeg" alt="News Image"
+                        class="w-full h-41 object-cover rounded-t-lg">
+                    <div class="p-4 mt-2">
+                        <h3 class="font-semibold text-lg mb-2">The Adlucem Picking the World’s Best Architects</h3>
+                        <p class="text-sm text-gray-600">Short description goes here to summarize the content of the news article.</p>
+                        <a href="#" class="text-gray-400 border border-gray-400 px-3 py-1 rounded mt-4 inline-block hover:bg-gray-400 hover:text-white transition">Read More</a>
+                    </div>
+                </div>
+    
+                <!-- News Card -->
+                <div class="bg-white border border-gray-300 rounded-lg shadow-sm h-[450px]">
+                    <img src="image2/a0192d3c6bf54b43a2a3436b5b65437a_enhanced.png" alt="News Image"
+                        class="w-full h-41 object-cover rounded-t-lg">
+                    <div class="p-4 mt-2">
+                        <h3 class="font-semibold text-lg mb-2">The Arts Museum for Location in Dubai</h3>
+                        <p class="text-sm text-gray-600">Short description goes here to summarize the content of the news article.</p>
+                        <a href="#" class="text-gray-400 border border-gray-400 px-3 py-1 rounded mt-4 inline-block hover:bg-gray-400 hover:text-white transition">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Founder Section -->
+    <section class="bg-black text-white py-[130px] px-16">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mr-12">
+                <h2 class="text-6xl font-bold mb-4">Adlucem</h2>
+                <h3 class="text-xl font-semibold mb-4">Founder of Adlucem Architects</h3>
+                <p class="text-gray-400 mb-6 text-xl">Adlucem has been at the forefront of architectural excellence and design.
+                    With over a decade of innovative projects, Adlucem founded this studio in 2014 to redefine what
+                    premium architecture means globally.</p>
+                <a href="#"
+                    class="bg-white text-gray-900 px-6 py-2 rounded-md font-medium hover:bg-gray-200">Read More</a>
+            </div>
+            <div class="lg:w-1/2 mt-6 lg:mt-6 ml-8 ">
+                <img src="image2/a-dark-theme-image-of-the-founder-of-adlucem-archi-2juDv6IzRIqrekTcAD12aA-PhVI3bvTRcGNESzSXp3Tpg.jpeg" alt="Founder Image"
+                    class="rounded-lg shadow-lg h-[500px] w-[500px] ml-6">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About Us Section -->
+    <section class="bg-white py-12 my-12">
+        <div class="container mx-auto px-12">
+            <h2 class="text-2xl font-bold mb-6">About us</h2>
+            <p class="text-gray-600 mb-8">We work at all scales and in all sectors. We create transformative cultural, corporate , 
+                residential and other spaces that work in synchronicity
+                with their surrounding</p>
+
+                <p class="text-gray-600 mb-8">Form and space are woven within the structure of buildings that evolve  from their surroundings and tie disparate programs together. 
+                    Enticingly contextual, each project combines an unwavering optimism for  the future with concepts of connectivity and integration.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Statistic Card -->
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-gray-900">950</p>
+                    <p class="text-gray-600 mt-2">Projects</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-gray-900">480</p>
+                    <p class="text-gray-600 mt-2">Team Members</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-gray-900">44</p>
+                    <p class="text-gray-600 mt-2">Countries</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg text-center">
+                    <p class="text-4xl font-bold text-gray-900">55</p>
+                    <p class="text-gray-600 mt-2">Nations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-[50px]">
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between mb-6">
+            <div>
+                <h3 class="text-lg font-bold">Adlucem Architects</h3>
+                <p class="text-gray-400 mt-2">10 Bowling Green Lane</p>
+                <p class="text-gray-400">London EC1R 0BQ/p>
+                <p class="text-gray-400">United Kingdom</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Quick Links</h3>
+                <ul class="text-gray-400 mt-2">
+                    <li><a href="#" class="hover:text-white">Home</a></li>
+                    <li><a href="#" class="hover:text-white">About</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Contact</h3>
+                <p class="text-gray-400 mt-2">Phone: +123 456 789</p>
+                <p class="text-gray-400">Email: info@adlucem.com</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Follow Us</h3>
+                <ul class="flex mt-2 space-x-4 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Facebook</a></li>
+                    <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p class="text-gray-400 mt-2 text-center py-2">© 2024 Adlucem Architects. All rights reserved.</p>
+        </div>
+
+    </footer>
+    
+    
+
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>

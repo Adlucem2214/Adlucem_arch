@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concept/77</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth animations for section reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+    .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #222222, #646464);
+  padding: 16px; 
+  border-radius: 20px; /* Rounded corners for the container */
+  overflow: hidden; /* Ensures iframe corners are rounded */
+  max-width: 90%; /* Limits the container width on larger screens */
+  width: 800px; /* Default width */
+  height: auto; /* Adjust height dynamically */
+  aspect-ratio: 16 / 9; /* Maintains the video aspect ratio */
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+.video-container iframe {
+  width: 90%; /* Make iframe fill its container */
+  height: 90%; /* Same as the container height */
+  border-radius: 20px; /* Rounded corners for the iframe */
+  border: none; /* Removes default iframe border */
+}
+
+.video_center {
+  margin: 0 auto; /* Horizontally centers the section */
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 100%; /* Make the container fully responsive */
+    max-width: 100%; /* Remove max-width for smaller screens */
+    padding: 8px; /* Adjust padding for smaller devices */
+  }
+}
+
+  </style>
+</head>
+<body class="text-white font-sans">
+  <header>
+    <nav class="bg-gray-900 p-4 flex justify-between items-center px-12">
+      
+      <div class="text-white text-2xl font-bold">AMA</div>
+  
+      
+      <ul class="hidden md:flex space-x-6 text-white">
+        <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+        <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+        <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+        <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+      </ul>
+  
+      
+      <div id="hamburger" class="flex flex-col space-y-1 md:hidden cursor-pointer">
+        <span class="block w-8 h-1 bg-white"></span>
+        <span class="block w-8 h-1 bg-white"></span>
+        <span class="block w-8 h-1 bg-white"></span>
+      </div>
+    </nav>
+  
+    
+    <ul id="mobile-menu" class="hidden md:hidden flex-col bg-gray-800 text-white p-4 space-y-4">
+      <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+      <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+      <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+      <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+    </ul>
+  </header>
+
+
+  <!-- Main Content -->
+  <main class="mt-10">
+    <!-- Hero Section -->
+    <section class="relative">
+      <img src="image2/arch3.jpg" alt="Hero Image" class="w-full h-[90vh] object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-center">
+        <h2 class="text-4xl font-bold mb-4">Concept/77</h2>
+        <p class="text-gray-300">UAE, 2016</p>
+      </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section class="py-20 bg-black">
+      <div class="max-w-5xl mx-auto px-4 text-center reveal">
+        <h2 class="text-2xl font-bold mb-6">Concept/77</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+          Concept/77 is a symphony of architecture, light, and space. The structure is designed to explore the duality of illumination and shadow, seamlessly blending geometry with natural elements.
+        </p>
+        <p class="text-gray-300 leading-relaxed">
+          Inspired by nature and minimalism, the design focuses on evoking a sense of tranquility and reflection. From conceptual drawings to lifelike renderings, each step is a testament to the pursuit of perfection.
+        </p>
+      </div>
+      <div class="more_info ml-8 mt-20">
+        <h3 class="mb-2">More Info</h3>
+        <p class="text-gray-300">Dubai, UAE</p>
+        <p class="text-gray-300">Jan, 2016</p>
+        <p class="text-gray-300">1000 square meter</p>
+      </div>
+    </section>
+
+    <!-- Drawing Section -->
+    <section class="py-16 bg-white text-black">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-left mb-6 reveal">Drawing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal">
+          <img src="image2/dr1.jpg" alt="Drawing 1" class="w-full h-[520px] object-cover">
+          <img src="image2/dr2.jpg" alt="Drawing 2" class="w-full h-[520px] object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Rendering Section -->
+    <section class="py-16 bg-black text-white">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-left mb-6 reveal">Rendering</h2>
+        <div class="w-full reveal">
+          <img src="image2/arch3.jpg" alt="Rendering" class="w-full h-[90vh] object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-white text-black video_center">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="video-container reveal">
+          <iframe
+            src="https://www.youtube.com/embed/placeholder_video_id"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-[50px]">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between mb-6">
+        <div>
+            <h3 class="text-lg font-bold">Adlucem Architects</h3>
+            <p class="text-gray-400 mt-2">10 Bowling Green Lane</p>
+            <p class="text-gray-400">London EC1R 0BQ/p>
+            <p class="text-gray-400">United Kingdom</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">Quick Links</h3>
+            <ul class="text-gray-400 mt-2">
+                <li><a href="#" class="hover:text-white">Home</a></li>
+                <li><a href="#" class="hover:text-white">About</a></li>
+                <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">Contact</h3>
+            <p class="text-gray-400 mt-2">Phone: +123 456 789</p>
+            <p class="text-gray-400">Email: info@adlucem.com</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">Follow Us</h3>
+            <ul class="flex mt-2 space-x-4 text-gray-400">
+                <li><a href="#" class="hover:text-white">Facebook</a></li>
+                <li><a href="#" class="hover:text-white">Twitter</a></li>
+                <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="text-gray-400 mt-2 text-center py-2">© 2024 Adlucem Architects. All rights reserved.</p>
+    </div>
+
+</footer>
+
+
+  <script>
+    
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+});
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("DOMContentLoaded", revealOnScroll);
+  </script>
+</body>
+</html>

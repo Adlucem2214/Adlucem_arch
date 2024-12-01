@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 2s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header>
+    <nav class="bg-gray-900 p-4 flex justify-between items-center px-12">
+      
+      <div class="text-white text-2xl font-bold">AMA</div>
+  
+      
+      <ul class="hidden md:flex space-x-6 text-white">
+        <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+        <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+        <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+        <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+      </ul>
+  
+      
+      <div id="hamburger" class="flex flex-col space-y-1 md:hidden cursor-pointer">
+        <span class="block w-8 h-1 bg-white"></span>
+        <span class="block w-8 h-1 bg-white"></span>
+        <span class="block w-8 h-1 bg-white"></span>
+      </div>
+    </nav>
+  
+    
+    <ul id="mobile-menu" class="hidden md:hidden flex-col bg-gray-800 text-white p-4 space-y-4">
+      <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+      <li><a href="project.html" class="hover:text-gray-400">Projects</a></li>
+      <li><a href="news.html" class="hover:text-gray-400">News</a></li>
+      <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="mt-16">
+    <section class="container mx-auto py-10 px-10 max-w-4xl">
+      <div class="animate-fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Unveiling Our Latest Sustainable Skyscraper Design: A New Paradigm in Urban Architecture
+        </h2>
+        <div class="flex items-center space-x-4 mb-6">
+          <img src="image2/profile.jpeg" alt="Author" class="rounded-full w-10 h-10">
+          <p class="text-gray-600">By <span class="font-semibold">John Doe</span> · Nov 19, 2024</p>
+        </div>
+        <img src="image2/news.jpeg" alt="Building" class="w-full h-auto rounded-lg shadow-lg mb-8">
+        <p class="text-gray-700 mb-8">
+          In the face of unprecedented challenges in urban development, our latest skyscraper project offers a visionary blueprint for sustainable architecture. Learn more about its innovative ecosystem and features.
+        </p>
+        <div>
+          <p class="text-gray-700 mb-8">
+            Our design focuses on integrating urban ecosystems with vertical greenery, utilizing renewable energy, and enhancing climate adaptability. It redefines the future of city living, combining innovation and sustainability in one elegant structure.
+          </p>
+        </div>
+       
+      </div>
+    </section>
+
+
+    <!-- Article Sections -->
+    <div class="space-y-10 container mx-auto py-10 px-10 max-w-4xl">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">A Vertical Ecosystem</h3>
+          <p class="text-gray-700">Standing at an impressive 80 stories, this architectural marvel is more  than just a building – it's a vertical ecosystem. The design  incorporates a series of cascading green terraces that spiral up the  façade, creating a lush, living skin that not only beautifies the  structure but also plays a crucial role in its sustainability features.</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Harnessing Nature’s Power</h3>
+          <p class="text-gray-700">Solar panels, wind turbines, and energy-efficient systems work in harmony to maximize the power of nature resouces efficiently</p>
+
+          <ul class="list-disc pl-5">
+            <li>
+                Solar Energy: The building's exterior is clad with  high-efficiency photovoltaic panels, seamlessly integrated into its  design. These panels are expected to generate up to 50% of the  building's energy needs.</p>
+            </li>
+            <li>
+                Wind Power: Specially designed wind turbines are incorporated  at strategic points along the building's height, taking advantage of  high-altitude winds to generate additional clean energy.
+            </li>
+            <li>
+                Rainwater Harvesting: An advanced rainwater collection and  filtration system will supply much of the building's water needs,  significantly reducing its reliance on municipal water sources.</p>
+            </li>
+        </ul>
+        
+        </div>
+        <div class="hidden" id="more-text">
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Innovative Climate Control</h3>
+                <p class="text-gray-700">The skyscraper employs a revolutionary climate control system that minimizes energy consumption:</p>
+                     
+                <ul class="list-disc pl-5">
+                    <li>Natural Ventilation: The building's unique shape and  strategically placed openings create a natural airflow, reducing the  need for artificial cooling.<li>
+                    
+                        <li>Green Insulation: The vegetated terraces act as a natural  insulating layer, helping to regulate internal temperatures and reduce  heating and cooling </li>costs.
+                        
+                       <li> Smart Shading: Responsive exterior shading systems  automatically adjust to optimize natural light and heat gain throughout  the day.</li>
+                      
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold mb-4">Looking to the Future</h3>
+                <p class="text-gray-700">As we move forward with this ambitious project, we're not just  constructing a building; we're creating a blueprint for the future of  urban development. This skyscraper stands as a testament to what's  possible when innovative design, cutting-edge technology, and a  commitment to sustainability converge.</p>
+              </div>
+        </div>
+       
+        <button id="read-more-btn" class="bg-black text-white px-4 py-2 rounded-md hover:bg-black-500" onclick="toggleReadMore()">Read More</button>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="bg-gray-200 py-10">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-2xl font-bold mb-8">Related Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <img src="image2/arch4.jpg" alt="Article 1" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold mb-2">Sustainable Urban Projects</h3>
+            <p class="text-gray-600">Discover how cities are transforming urban spaces into eco-friendly environments...</p>
+            <a href="#" class="text-gray-600 font-medium border border-gray-600 px-4 py-2 rounded hover:bg-gray-600 hover:text-white inline-block text-center mt-4">Read More</a>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <img src="image2/arch6.jpg" alt="Article 2" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold mb-2">Innovative Building Techniques</h3>
+            <p class="text-gray-600">Explore cutting-edge technologies that are shaping modern construction...</p>
+            <a href="#" class="text-gray-600 font-medium border border-gray-600 px-4 py-2 rounded hover:bg-gray-600 hover:text-white inline-block text-center mt-4">Read More</a>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <img src="image2/arch2.jpg" alt="Article 3" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-semibold mb-2">The Future of Architecture</h3>
+            <p class="text-gray-600">How architectural design is evolving to meet the challenges of tomorrow...</p>
+            <a href="#" class="text-gray-600 font-medium border border-gray-600 px-4 py-2 rounded hover:bg-gray-600 hover:text-white inline-block text-center mt-4">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-[50px]">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between mb-6">
+        <div>
+            <h3 class="text-lg font-bold">Adlucem Architects</h3>
+            <p class="text-gray-400 mt-2">10 Bowling Green Lane</p>
+            <p class="text-gray-400">London EC1R 0BQ/p>
+            <p class="text-gray-400">United Kingdom</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">Quick Links</h3>
+            <ul class="text-gray-400 mt-2">
+                <li><a href="#" class="hover:text-white">Home</a></li>
+                <li><a href="#" class="hover:text-white">About</a></li>
+                <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">Contact</h3>
+            <p class="text-gray-400 mt-2">Phone: +123 456 789</p>
+            <p class="text-gray-400">Email: info@adlucem.com</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold">Follow Us</h3>
+            <ul class="flex mt-2 space-x-4 text-gray-400">
+                <li><a href="#" class="hover:text-white">Facebook</a></li>
+                <li><a href="#" class="hover:text-white">Twitter</a></li>
+                <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p class="text-gray-400 mt-2 text-center py-2">© 2024 Adlucem Architects. All rights reserved.</p>
+    </div>
+
+</footer>
+<script>
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Toggle full article content
+  function toggleReadMore() {
+    const moreText = document.getElementById('more-text');
+    const btn = document.getElementById('read-more-btn');
+
+    if (moreText.classList.contains('hidden')) {
+      moreText.classList.remove('hidden');
+      btn.textContent = 'Show Less';
+    } else {
+      moreText.classList.add('hidden');
+      btn.textContent = 'Read More';
+    }
+  }
+</script>
+
+</body>
+</html>
